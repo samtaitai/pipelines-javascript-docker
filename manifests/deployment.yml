@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: samtaitaipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: samtaitaipipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: samtaitaipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: samtaitaipipelinesjavascriptdocker 
+          image: soyoncontainerregistry.azurecr.io/samtaitaipipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
